@@ -23,7 +23,7 @@ object nasa_log_parser extends  App {
   val test_data = spark.sql("select * from url_counts")
 
   /**
-   * Splitting the sql query as rank function is not available in the above format
+   * Calculate topN host & url per each day
    */
   val result = topLogRecord(10)
 
