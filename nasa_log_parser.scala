@@ -47,7 +47,7 @@ object nasa_log_parser extends  App with Logging {
   /**
    * Calculate topN host & url per each day
    */
-  val result = topLogRecord(10)
+  val result = topLogRecord(topN)
 
   /**
    * Printing topN result
