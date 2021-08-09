@@ -4,7 +4,8 @@ import org.apache.spark.internal.Logging
 import org.apache.spark.sql.{DataFrame, SparkSession}
 case class LogRecord( host: String, timeStamp: String, url:String,httpCode:Int)
 
-object nasa_log_parser extends  App with Logging{
+object nasa_log_parser extends  App with Logging {
+  
   val PATTERN = """^(\S+) (\S+) (\S+) \[([\w:/]+\s[+\-]\d{4})\] "(\S+) (\S+)(.*)" (\d{3}) (\S+)""".r
   var inputDataPath: String = _
   var outputTableOrPath: String = _
